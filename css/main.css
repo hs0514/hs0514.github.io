@@ -388,7 +388,7 @@ body{
         width:70%
     }
 }
-@media (max-width:360px){
+@media (max-width:375px){
     /* visual */
     .visual img{
         padding-top:70px;
@@ -407,6 +407,6 @@ body{
     }
     /* gallery */
     .gallery li{
-        width:90%;
+        width:88%;
     }
 }
