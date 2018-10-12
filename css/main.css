@@ -130,35 +130,35 @@ body{
     height:200px;
 }
 .s1{
-    background:url(../html5.png) no-repeat 0 0;
+    background:url(../images/html5.png) no-repeat 0 0;
     background-size:100%
 }
 .s2{
-    background:url(../css3.png) no-repeat 0 0;
+    background:url(../images/css3.png) no-repeat 0 0;
     background-size:100%
 }
 .s3{
-    background:url(../javascript.png) no-repeat 0 0;
+    background:url(../images/javascript.png) no-repeat 0 0;
     background-size:100%
 }
 .s4{
-    background:url(../jquery.png) no-repeat 0 0;
+    background:url(../images/jquery.png) no-repeat 0 0;
     background-size:100%
 }
 .s5{
-    background:url(../photoshop.png) no-repeat 0 0;
+    background:url(../images/photoshop.png) no-repeat 0 0;
     background-size:100%
 }
 .s6{
-    background:url(../illustrator.png) no-repeat 0 0;
+    background:url(../images/illustrator.png) no-repeat 0 0;
     background-size:100%
 }
 .s7{
-    background:url(../github.png) no-repeat 0 0;
+    background:url(../images/github.png) no-repeat 0 0;
     background-size:100%
 }
 .s8{
-    background:url(../wordpress.png) no-repeat 0 0;
+    background:url(../images/wordpress.png) no-repeat 0 0;
     background-size:100%;
 }
 /* container2 */
@@ -251,11 +251,6 @@ body{
 }
 .gallery img{
     max-width:100%
-    /* position: absolute; 
-    top:0;
-    left:50%;
-    transform: translate(-50%, 0); */
-    
 }
 
 /* footer */
@@ -264,8 +259,7 @@ body{
 }
 .contact{
     margin:0 auto;
-    padding:10px 0;
-    max-width:548px;
+    max-width:505px;
 }
 .contact::after{
     content:"";
@@ -276,29 +270,20 @@ body{
     float:left;
     padding:20px 0;
 }
+.contact li img{
+    width:40px;
+}
 .contact li span{
-    display:block;
-    padding:16px 20px 16px 66px;
+    padding:0 20px;
     color:#40597d;
     font-size:15px;
     font-weight:600;
-    text-align:center;
-    letter-spacing:3px;
+    line-height:38px;
+    letter-spacing:2px;
 }
-.c1{
-    background:url(../closed-envelope-circle.png) no-repeat 14px 50%;
-    background-size:40px;
-}
-.c2{
-    background:url(../phone-symbol-of-an-auricular-inside-a-circle.png) no-repeat 14px 50%;
-    background-size:40px;
-}
+
 
 /* mediaquery */
-@media (max-width:){}
-@media (max-width:1280px){
-
-}  
 @media (max-width:1024px){
     /* header-tnb */
 
@@ -327,6 +312,20 @@ body{
         display:block;
     }
     /*  */
+    .skill{
+        max-width:360px;
+    }
+    .skill li{
+        margin:20px auto;
+        width:50%;
+    }
+    .skill li span{
+        width:120px;
+        height:120px;
+    }
+    .skill li p{
+        font-size:14px;
+    }
     .skill li:hover{
         transform:scale(1,1)
     }
@@ -358,37 +357,27 @@ body{
         color:#fff;
         background:#000;
     }
-}
-@media (max-width:700px){
-    /* visual */
-    
-    /* skill */
-    .skill{
-        max-width:360px;
-    }
-    .skill li{
-        margin:20px auto;
-        width:50%;
-    }
-    .skill li span{
-        width:120px;
-        height:120px;
-    }
-    .skill li p{
-        font-size:14px;
-    }
-    /*  */
-    .portfolio{
-        padding:40px 0 140px;
-    }
     /* gallery */
     .gallery li{
         float:none;
         margin:0 auto;
-        width:70%
+        width:70%;
+        height:600px;
     }
+    /* footer */
+    .contact{
+        width:476px;
+    }
+    .contact li span{
+        font-size:14px;
+        line-height:35px;
+    }
+    .contact li img{
+        width:35px;
+    }
+
 }
-@media (max-width:375px){
+@media (max-width:550px){
     /* visual */
     .visual img{
         padding-top:70px;
@@ -409,4 +398,29 @@ body{
     .gallery li{
         width:88%;
     }
+    /* footer */
+    .contact{
+        width:100%;
+        margin:10px auto;
+    }
+    .contact li{
+        float:none;
+        margin:0 auto;
+        padding:10px 0;
+        
+    }
+    .contact li img{
+        width:30px;
+    }
+    .contact li span{
+        font-size:13px;
+        line-height:30px;
+    }
+    .contact .c1{
+        width:254px;
+    }
+    .contact .c2{
+        width:194px;
+    }
+
 }
