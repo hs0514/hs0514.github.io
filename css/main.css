@@ -51,6 +51,7 @@ body{
     font-size:inherit;
     font-weight:inherit;
     letter-spacing:2px;
+    transition:all .3s;
 }
 .tnb .home i{
     display:none;
@@ -96,7 +97,11 @@ body{
     background:url(../images/mobile_menu.png) no-repeat 0 0;
     background-size:100% 100%;
 }
-
+/* tnb hover */
+.home a:hover em, .menu a:hover{
+    color:#fff;
+}
+/*  */
 .white{
     color:#fff!important;
 }
@@ -389,18 +394,19 @@ body{
         position:absolute;
         top:-999em;
     }
-    
     .tnb .menu{
         display:none;
         position:absolute;
-        top:40px;
+        top:59px;
         right:0;
         float:none;
         width:100%;
         padding-right:15px;
+        background:#ffe374;
     }
     .tnb .menu a{
         float:none;
+        padding:20px 0;
         width:100%;
         color: #fff;
         text-align:right;
@@ -478,6 +484,9 @@ body{
 }
 @media (max-width:550px){
     /* visual */
+    .visual{
+        height:570px;
+    }
     .visual img{
         padding-top:70px;
         max-width:250px;
@@ -485,6 +494,11 @@ body{
     .visual h1{
         bottom:30px;
         font-size:42px;
+    }
+    .visual span{
+        margin:0 auto;
+        width:200px;
+        font-size:15px;
     }
     /* skill */
     .skill{
@@ -500,6 +514,7 @@ body{
         width:120px;
         height:120px;
     }
+    
     /* gallery */
     .gallery li{
         width:88%;

@@ -1,60 +1,69 @@
+// header 고정
 $(document).ready(function(){
-    var menu = $(".header").offset();
-    $(window).scroll(function(){
-        if($(document).scrollTop()> menu.top){
-            $(".header").addClass("fixed");
-        } else{
-            $(".header").removeClass("fixed");
-        }
-    });
-    
-    
+	var headOffset = $(".header").offset();
+	var $tnb = $('.tnb');
+	var $moBtn = $('.mobile_m');
+	var $memu = $('.menu');
 
-    $('.home').on('click', function () {
-        $('html,body').animate({
-            scrollTop: 0
-        }, 500);
-        return false;
-    });
-    $('.m_skill').on('click', function () {
-        $('html,body').animate({
-            scrollTop: 600
-        }, 500);
-        
-        return false;
-    });
-    $('.m_portfolio').on('click', function () {
-        $('html,body').animate({
-            scrollTop: 1500
-        }, 500);
-        return false;
-    });
-    $(window).scroll(function(){ 
-    if($(this).scrollTop() > 500){ 
-        $(".m_skill").addClass("white"); 
-        }else{  
-        $(".m_skill").removeClass("white"); 
-        } 
-    })
-    $(window).scroll(function(){ 
-    if($(this).scrollTop() > 1400){ 
-        $(".m_portfolio").addClass("white"); 
-        }else{ 
-        $(".m_portfolio").removeClass("white"); 
-        } 
-    });
+	$(window).scroll(function(){
+		if($(document).scrollTop()> headOffset.top){
+			$(".header").addClass("fixed");
+		} else{
+			$(".header").removeClass("fixed");
+		}
+	});
 
-    /* 모바일 버튼시 동작되는 메뉴 */
-    if($(window).width() <= 768){
-        $('.mobile_m').on('click', function(){
-            mobileButton();
-        })
-    }
+	$('.home').on('click', function () {
+		funScroll();
+		return false;
+	});
+	$('.m_skill').on('click', function () {
+		funScroll();
+		return false;
+	});
+	$('.m_portfolio').on('click', function () {
+		funScroll();
+		$(".m_skill").addClass("white");
+			return false;
+		});
+
+	$(window).scroll(function(){ 
+	if($(this).scrollTop() > 500){ 
+		$(".m_skill").addClass("white"); 
+		} else {  
+		$(".m_skill").removeClass("white");
+		} 
+	});
+	$(window).scroll(function(){ 
+	if($(this).scrollTop() > 1400){ 
+		$(".m_portfolio").addClass("white"); 
+		}else{ 
+		$(".m_portfolio").removeClass("white");
+		
+		} 
+	});
+
+	
+	if($(window).width() <= 768){
+		console.log();
+		$('body').addClass('mo');
+		$moBtn.on('click', function(){
+			$memu.slideToggle();
+		})
+	} else {
+		$('body').removeClass('mo');
+		$memu.show();
+	}
 });
 $(window).on('resize', function(){
-    // mobileButton();
+	if($(window).width() <= 768){
+		$('body').addClass('mo');
+	} else {
+		$('body').removeClass('mo');
+	}
 }).trigger('resize');
-
-function mobileButton(){
-    $('.menu').slideToggle();
+function funScroll(){
+	$('html,body').animate({
+		scrollTop: 0
+	}, 500);
 }
