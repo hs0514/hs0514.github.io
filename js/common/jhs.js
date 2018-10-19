@@ -1,69 +1,36 @@
-// header 고정
-$(document).ready(function(){
-	var headOffset = $(".header").offset();
-	var $tnb = $('.tnb');
-	var $moBtn = $('.mobile_m');
-	var $memu = $('.menu');
-
-	$(window).scroll(function(){
-		if($(document).scrollTop()> headOffset.top){
-			$(".header").addClass("fixed");
-		} else{
-			$(".header").removeClass("fixed");
-		}
-	});
-
-	$('.home').on('click', function () {
-		funScroll();
+$(function () {
+	var responSize = 768;
+	var headerOffset = $(".header").offset();
+	/* //모바일화면일 때 버거아이콘 클릭 */
+	$('.icon-menu').click(function () {
+		$(this).toggleClass('active'); //아이콘에 class 추가
+		$('.nav').toggleClass('down'); //메뉴에 class 추가
 		return false;
 	});
-	$('.m_skill').on('click', function () {
-		funScroll();
-		return false;
-	});
-	$('.m_portfolio').on('click', function () {
-		funScroll();
-		$(".m_skill").addClass("white");
-			return false;
-		});
+	$(window).resize(function () {
+		var win_w = $(window).width();
+		var win_h = $(window).height();
 
-	$(window).scroll(function(){ 
-	if($(this).scrollTop() > 500){ 
-		$(".m_skill").addClass("white"); 
-		} else {  
-		$(".m_skill").removeClass("white");
-		} 
-	});
-	$(window).scroll(function(){ 
-	if($(this).scrollTop() > 1400){ 
-		$(".m_portfolio").addClass("white"); 
-		}else{ 
-		$(".m_portfolio").removeClass("white");
+		/* //스크롤시 상단 고정
+		$(window).scroll(function () {
+			if ($(window).scrollTop() > headerOffset.top) {
+				$(".header").addClass("fixed");
+			} else{
+				$(".header").removeClass("fixed");
+			}
+		}).trigger('scroll');
+		*/
 		
-		} 
-	});
-
-	
-	if($(window).width() <= 768){
-		console.log();
-		$('body').addClass('mo');
-		$moBtn.on('click', function(){
-			$memu.slideToggle();
-		})
-	} else {
-		$('body').removeClass('mo');
-		$memu.show();
-	}
+		//pc
+		if (win_w > responSize) { 
+			$('body').addClass('pc').removeClass('mo');
+			$('.icon-menu').removeClass('active'); //pc 화면일 때 버거아이콘 class 추가된거 초기화
+			$('.nav').removeClass('down'); //pc 화면일 때 메뉴 class 추가된거 초기화
+		}
+		//mobile
+		else {
+			$('body').addClass('mo').removeClass('pc');
+			
+		}
+	}).trigger('resize');
 });
-$(window).on('resize', function(){
-	if($(window).width() <= 768){
-		$('body').addClass('mo');
-	} else {
-		$('body').removeClass('mo');
-	}
-}).trigger('resize');
-function funScroll(){
-	$('html,body').animate({
-		scrollTop: 0
-	}, 500);
-}
