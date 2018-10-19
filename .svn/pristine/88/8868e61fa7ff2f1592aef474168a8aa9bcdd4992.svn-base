@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="js/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery.easing.min.js"></script>    
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <nav class="tnb">
+                <span class="home">
+                    <!-- <img src="images/mobile_home.png" alt="" class="mobile_h"> -->
+                    <a href="#"><i class="ico"></i><em>HOME</em></a>
+                </span>
+
+                <button class="mobile_m"><i class="ico"></i><em>메뉴</em></button>
+                <span class="menu">
+                    <a href="#" class="m_skill">SKILL</a>
+                    <a href="#" class="m_portfolio">PORTFOLIO</a>
+                </span>
+            </nav>
+        </div>
+        <!-- //.header -->
+        <div class="visual">
+            <img src="images/visual.jpg" alt="">
+            <h1>HANSEUL'S PORTFOLIO</h1>
+            <span>2018.07.10 ~ 2018.12.18</span>
+            <span>(NCS)스마트기기 UI/UX디자인(앱&웹디자인) 과정 수료 / 더조은 안양</span>
+        </div>
+        <!-- //.visual -->
+        <div class="container1">
+            <h2>SKILL</h2>
+            <ul class="skill">
+                <li><span class="s1"></span><p>HTML</p></li>
+                <li><span class="s2"></span><p>CSS</p></li>
+                <li><span class="s3"></span><p>JAVA SCRIPT</p></li>
+                <li><span class="s4"></span><p>JQUERY</p></li>
+                <li><span class="s5"></span><p>PHOTOSHOP</p></li>
+                <li><span class="s6"></span><p>ILLUSTRATOR</p></li>
+                <li><span class="s7"></span><p>GITHUB</p></li>
+                <li><span class="s8"></span><p>WORD PRESS</p></li>
+            </ul>
+        </div>
+        <!-- //.container1 -->
+        <div class="container2">
+            <h2>PORTFOLIO</h2>
+            <ul class="gallery">
+                <li>
+                    <figure class="imgwrap">
+                        <img src="images/pre1.png" alt="">                        
+                        <figcaption class="hovertext">
+                            <p>사이트명:NMART(가상)</p>
+                            <p>제작기간:2018.09</p>
+                            <p>TEAM PROJECT</p>
+                            <p>HTML5, CSS3 사용</p>
+                            <a href="#">VIEW SITE</a>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="imgwrap">
+                        <img src="images/pre2.png" alt="">
+                        <figcaption class="hovertext">
+                            <p>사이트명:(가상)</p>
+                            <p>제작기간:2018.09</p>
+                            <p>HTML5, CSS3 사용</p>
+                            <a href="#">VIEW SITE</a>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="imgwrap">
+                        <img src="images/pre3.png" alt="">
+                        <figcaption class="hovertext">
+                            <p>사이트명:(가상)</p>
+                            <p>제작기간:2018.09</p>
+                            <p>HTML5, CSS3 사용</p>
+                            <a href="#">VIEW SITE</a>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="imgwrap">
+                        <img src="images/pre4.png" alt="">
+                        <figcaption class="hovertext">
+                            <p>사이트명:JARDIN(SITE COPY)</p>
+                            <p>제작기간:2018.09</p>
+                            <p>HTML5, CSS3, JQUERY 사용</p>
+                            <a href="#">VIEW SITE</a>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="imgwrap">
+                        <img src="images/pre5.png" alt="">
+                        <figcaption class="hovertext">
+                            <p>사이트명:NMART(SITE COPY)</p>
+                            <p>제작기간:2018.09</p>
+                            <p>TEAM PROJECT</p>
+                            <p>HTML5, CSS3 사용</p>
+                            <a href="#">VIEW SITE</a>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="imgwrap">
+                        <img src="images/pre5.png" alt="">
+                        <figcaption class="hovertext">
+                            <p>사이트명:NMART(가상)</p>
+                            <p>제작기간:2018.09</p>
+                            <p>HTML5, CSS3 사용</p>
+                            <a href="#">VIEW SITE</a>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="imgwrap">
+                        <img src="images/pre5.png" alt="">
+                        <figcaption class="hovertext">
+                            <p>사이트명:NMART(가상)</p>
+                            <p>제작기간:2018.09</p>
+                            <p>HTML5, CSS3 사용</p>
+                            <a href="#">VIEW SITE</a>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="imgwrap">
+                        <img src="images/pre5.png" alt="">
+                        <figcaption class="hovertext">
+                            <p>사이트명:NMART(가상)</p>
+                            <p>제작기간:2018.09</p>
+                            <p>HTML5, CSS3 사용</p>
+                            <a href="#">VIEW SITE</a>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+        <!-- //.container2 -->
+        <div class="footer">
+            <ul class="contact">
+                <li class="c1"><img src="images/mail.png" alt=""><span>agag0514@naver.com</span></li>
+                <li class="c2"><img src="images/phone.png" alt=""><span>010-8872-6056</span></li>
+            </ul>
+        </div>
+        <!-- //.footerwrap -->
+    </div>
+    <!-- //.wrap -->
+    <script type="text/javascript" src="js/common/jhs.js"></script>
+</body>
+</html>
