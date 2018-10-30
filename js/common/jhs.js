@@ -11,18 +11,17 @@ $(function () {
 		var win_w = $(window).width();
 		var win_h = $(window).height();
 
-		/* //스크롤시 상단 고정
+		//스크롤시 상단 고정
 		$(window).scroll(function () {
 			if ($(window).scrollTop() > headerOffset.top) {
-				$(".header").addClass("fixed");
+				$(".wrap").addClass("fixed");
 			} else{
-				$(".header").removeClass("fixed");
+				$(".wrap").removeClass("fixed");
 			}
 		}).trigger('scroll');
-		*/
 		
 		//pc
-		if (win_w > responSize) { 
+		if (win_w > responSize - 17 ) { 
 			$('body').addClass('pc').removeClass('mo');
 			$('.icon-menu').removeClass('active'); //pc 화면일 때 버거아이콘 class 추가된거 초기화
 			$('.nav').removeClass('down'); //pc 화면일 때 메뉴 class 추가된거 초기화
@@ -30,7 +29,10 @@ $(function () {
 		//mobile
 		else {
 			$('body').addClass('mo').removeClass('pc');
-			
+			$('.nav a').click(function () {
+				$('.icon-menu').removeClass('active');
+				$('.nav').removeClass('down');
+			})
 		}
 	}).trigger('resize');
 });
