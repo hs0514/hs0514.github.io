@@ -46,11 +46,11 @@ body{
 	text-align:center;
 	letter-spacing:2px;
 }
-.nav a:hover,.nav a:focus,
+/* .nav a:hover,.nav a:focus,
 .nav .active{
 	color:#fff;
-}
-.nav a::before,
+} */
+/* .nav a::before,
 .nav a::after {
 	display: inline-block;
 	line-height:1;
@@ -64,12 +64,16 @@ body{
 	content: '[';
 	margin-right: 10px;
 	transform: translate(20px, -1px);
-}
+}*/
 .nav a::after {
-	content: ']';
-	margin-left: 10px;
-	transform: translate(-20px, -1px);
-}
+	content:'';
+	position:relative;
+	bottom:0;
+	width:20px;
+	height:3px;
+	background:#fff;
+	
+} 
 
 .nav a:hover::before,
 .nav a:hover::after,
@@ -118,7 +122,7 @@ body{
 	left:50%; 
 	top:50%; 
 	margin:-2px 0 0 -15px;
-	transition:background-color .05s .2s;
+	transition:.05s .2s;
 }
 .icon-menu i:before {
 	top:-8px;
@@ -193,19 +197,19 @@ body{
 	text-align:center;
 }
 
-/* container2 */
-.container1{
+/* skillwrap */
+.skillwrap{
 	background:#fff;
 }
-/* container1-h2 */
-.container1 h2{
-	/* padding-top:100px; */
+/* skillwrap-h2 */
+.skillwrap h2{
+	padding-bottom:50px;
 	color:#000;
 	font-size:43px;
 	font-weight:700;
 	text-align:center;
 }
-.container1 h2::after{
+.skillwrap h2::after{
 	content:"";
 	display:block;
 	margin:15px auto 0;
@@ -213,7 +217,7 @@ body{
 	height:5px;
 	background:#000;
 }
-/* container1-skill */
+/* skillwrap-skill */
 .skill{
 	margin:0 auto;
 	/* padding:100px 0; */
@@ -278,19 +282,19 @@ body{
 	background:url(../images/wordpress.png) no-repeat 0 0;
 	background-size:100%;
 }
-/* container2 */
-.container2{
+/* portfolio */
+.portfolio{
 	/* padding:140px 0; */
 	background:#fff;
 }
-.container2 h2{
+.portfolio h2{
 	/* padding-top:100px; */
 	padding-bottom:26px;
 	font-size:43px;
 	font-weight:700;
 	text-align:center;
 }
-.container2 h2::after{
+.portfolio h2::after{
 	content:"";
 	display:block;
 	margin:15px auto 0;
@@ -345,6 +349,12 @@ body{
 	font-size:19px;
 	text-align:center;
 	transition:all .5s;
+}
+/* 버튼이 두개일 때 */
+.btn2 a{
+	display:inline-block;
+	width:170px;
+	font-size:17px;
 }
 .hovertext a:hover{
 	color:#000;
@@ -444,17 +454,16 @@ body{
 	}
 	.mo .nav a{
 		overflow:hidden;
-		float: none;
-		width: 100%;
+		float:none;
+		width:100%;
 		height:0;
 		padding:0;
-		color: #fff;
 		text-align: right;
 	}
 	.mo .nav.down a{
 		height:auto;
 		margin-bottom:-4px;
-		padding: 20px 0;
+		padding:20px 15px;
 	}
 	.mo .nav .m_home,
 	.mo .nav.down .m_home{
@@ -473,17 +482,15 @@ body{
 	.mo .nav .m_home::after{
 		display:none;
 	}
-
 	.mo .wrap.fixed .section{
 		padding:160px 0 100px;
 	}
-
+	/* visual */
 	.visual{
 		height:auto;
 		padding-bottom:100px;
 	}
-	
-	/*  */
+	/* skill */
 	.skill{
 		max-width:440px;
 	}
@@ -524,6 +531,10 @@ body{
 		font-size:12px;
 		background:#000;
 		border:1px solid #000;
+	}
+	/* 버튼이 두개일 때 */
+	.btn2 a{
+		width:40%;
 	}
 	.hovertext a:hover{
 		color:#fff;
