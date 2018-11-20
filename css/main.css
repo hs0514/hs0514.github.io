@@ -74,7 +74,6 @@ body{
 	background:#fff;
 	
 } 
-
 .nav a:hover::before,
 .nav a:hover::after,
 .nav a:focus::before,
@@ -93,8 +92,8 @@ body{
 	right: 0;
 	width:60px; 
 	height:60px; 
-	transform: translateY(-50%);
-	transition:background-color .3s;
+	transform:translateY(-50%);
+	/* transition:all .3s; */
 	z-index:10;
 }
 .pc .icon-menu{
@@ -155,7 +154,7 @@ body{
 	padding-top:100px;
 }
 .wrap.fixed .section{
-	padding:200px 0 100px;
+	padding:180px 0 100px;
 }
 /* visual */
 .visual{
@@ -289,7 +288,7 @@ body{
 }
 .portfolio h2{
 	/* padding-top:100px; */
-	padding-bottom:26px;
+	padding-bottom:50px;
 	font-size:43px;
 	font-weight:700;
 	text-align:center;
@@ -318,6 +317,9 @@ body{
 	float:left;
 	width:50%;
 	padding:6%;
+}
+.gallery img{
+	max-width:100%
 }
 /* portfolio-imgwrap,hovertext */
 .imgwrap{
@@ -350,12 +352,7 @@ body{
 	text-align:center;
 	transition:all .5s;
 }
-/* 버튼이 두개일 때 */
-.btn2 a{
-	display:inline-block;
-	width:170px;
-	font-size:17px;
-}
+
 .hovertext a:hover{
 	color:#000;
 	background:#fff;
@@ -371,16 +368,24 @@ body{
 	opacity:0;
 	transition:all .5s;
 }
-.gallery li:hover .imgwrap::after{
-	opacity:0.8;
-}
-.gallery li:hover .hovertext{
-	display:block;
-}
-.gallery img{
-	max-width:100%
+[src="images/mobileKcc.png"]{
+    display:block;
+    margin:0 auto;
+	width:38%;
 }
 
+.hoverbox:hover .imgwrap::after{
+	opacity:0.8;
+}
+.hoverbox:hover .hovertext{
+	display:block;
+}
+/* view site 버튼이 두개일 때 */
+.btn2 a{
+	display:inline-block;
+	width:170px;
+	font-size:17px;
+}
 /* footer */
 .footer{
 	background:#ffe374;
@@ -483,7 +488,7 @@ body{
 		display:none;
 	}
 	.mo .wrap.fixed .section{
-		padding:160px 0 100px;
+		padding:140px 0 100px;
 	}
 	/* visual */
 	.visual{
@@ -508,9 +513,12 @@ body{
 	.skill li:hover{
 		transform:scale(1,1)
 	}
-	/*  */
+	/* gallery */
 	.gallery li{
-		height:500px;
+		float:none;
+		margin:0 auto;
+		width:70%;
+		height:600px;
 	}
 	.imgwrap::after{
 		display:none;
@@ -540,13 +548,7 @@ body{
 		color:#fff;
 		background:#000;
 	}
-	/* gallery */
-	.gallery li{
-		float:none;
-		margin:0 auto;
-		width:70%;
-		height:600px;
-	}
+
 	/* footer */
 	.contact{
 		width:476px;
