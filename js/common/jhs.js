@@ -23,7 +23,7 @@ $(function () {
 		}).trigger('scroll');
 		
 		//pc
-		if (win_w > 751) { 
+		if (win_w > responSize) { 
 			$('body').addClass('pc').removeClass('mo');
 			$('.icon-menu').removeClass('active'); //pc 화면일 때 버거아이콘 class 추가된거 초기화
 			$('.nav').removeClass('down'); //pc 화면일 때 메뉴 class 추가된거 초기화
