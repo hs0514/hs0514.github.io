@@ -106,7 +106,8 @@ function removeList(event) { // 투두리스트 삭제
   const todoListLi = event.target.parentElement;
   todoListLi.remove();
   todoListArr = todoListArr.filter((list) => list.id !== parseInt(list.id));
-  localStorage.setItem("todoList", JSON.stringify(todoListArr));
+  if(todoListArr.length === 0) localStorage.removeItem('todoList');
+  else localStorage.setItem("todoList", JSON.stringify(todoListArr));
 }
 
 const todoListUl = document.getElementById("todoList");
@@ -125,8 +126,9 @@ function setList(list) { // 투두리스트 화면에 그림
 }
 
 const localTodoList = localStorage.getItem("todoList");
-if(localTodoList !== null || localTodoList !== "") { // 로컬스토리지 확인 후 화면에 그림
-  const parseTodoList = JSON.parse(localStorage.getItem("todoList"));
+
+if(localTodoList !== null) { // 로컬스토리지 확인 후 화면에 그림
+  const parseTodoList = JSON.parse(localTodoList);
   todoListArr = parseTodoList;
   parseTodoList.forEach(setList);
 }
