@@ -1,210 +1,54 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="format-detection" content="telephone=no, address=no, email=no, date=no">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="theme-color" content="#ffffff">
-	<title>HANSEUL'S PORTFOLIO</title>
-	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-	<link rel="manifest" href="favicon/site.webmanifest">
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<script type="text/javascript" src="js/jquery/jquery-1.12.4.min.js"></script>
-	<script type="text/javascript" src="js/jquery/jquery.easing.min.js"></script>
-	<script type="text/javascript" src="js/common/uxDetect.min.js"></script>
-	<script>
-		$(document).ready(function(){
-			var navBtn = $(".nav a");
-			var contents = $(".mainwrap > .section");
-
-			navBtn.on("click", function(e){
-				e.preventDefault();
-				click_event($(this));
-			});
-
-			function click_event(target){
-				var section = contents.eq(target.index());
-				var offset = section.offset().top;
-
-				$("body, html").stop().animate({scrollTop:offset}, 800, 'easeInOutCubic');
-			}
-
-
-			$(window).on("scroll",function(){
-				var wScroll = $(this).scrollTop();
-
-				contents.each(function(i, e){
-					if(wScroll >= $(e).offset().top){
-						navBtn.removeClass("active").eq(i).addClass("active");
-					}
-				});
-			});
-			$('.hovertext a').attr('target','_blank');
-			$('.hovertext a').attr('title','새창열림');
-		});
-	</script>
-	<!--[if lt IE 9]>
-		<script type="text/javascript" src="js/plugin/respond.min.js"></script>
-		<script type="text/javascript" src="js/plugin/css3-mediaqueries.js"></script>
-	<![endif]-->
-	<!-- lt = less than -->
-</head>
-<body>
-	<div class="wrap">
-		<header class="header">
-			<button class="icon-menu"><i>메뉴</i></button>
-			<nav class="nav">
-				<a data-panel="section1" href="#section1" class="m_home">HOME</a>
-				<a data-panel="section2" href="#section2" class="m_skill">SKILL</a>
-				<a data-panel="section3" href="#section3" class="m_portfolio">PORTFOLIO</a>
-			</nav>
-		</header>
-		<!-- //.header -->
-		<main class="mainwrap">
-			<section id="section1" class="visual section">
-				<div class="tbl-cell">
-					<img src="images/visual.jpg" alt="">
-					<h1>HANSEUL'S PORTFOLIO</h1>
-					<span>2018.07.10 ~ 2018.12.18</span>
-					<span>(NCS)스마트기기 UI/UX디자인(앱&웹디자인) 과정 수료 / 더조은 안양</span>
-				</div>
-			</section>
-			<!-- //.visual -->
-			<section id="section2" class="skillwrap section">
-				<h2>SKILL</h2>
-				<ul class="skill">
-					<li><span class="s1"></span><p>HTML</p></li>
-					<li><span class="s2"></span><p>CSS</p></li>
-					<li><span class="s3"></span><p>JAVA SCRIPT</p></li>
-					<li><span class="s4"></span><p>JQUERY</p></li>
-					<li><span class="s5"></span><p>PHOTOSHOP</p></li>
-					<li><span class="s6"></span><p>ILLUSTRATOR</p></li>
-					<li><span class="s7"></span><p>GITHUB</p></li>
-					<li><span class="s8"></span><p>WORD PRESS</p></li>
-				</ul>
-			</section>
-			<!-- //.container1 -->
-			<section id="section3" class="portfolio section">
-				<h2>PORTFOLIO</h2>
-				<ul class="gallery">
-					<li>
-						<div class="hoverbox">
-							<figure class="imgwrap">
-								<img src="images/nmart.png" alt="nmart">
-								<figcaption class="hovertext">
-									<p>사이트명:NMART(RENEWAL)</p>
-									<p>제작기간:3일</p>
-									<p>TEAM PROJECT</p>
-									<p>HTML5, CSS3 사용</p>
-									<a href="portfolio/team/nmart/">VIEW SITE</a>
-								</figcaption>
-							</figure>
-						</div>	
-					</li>
-					<li>
-						<div class="hoverbox">
-							<figure class="imgwrap">
-								<img src="images/corp.png" alt="기업형 사이트">
-								<figcaption class="hovertext">
-									<p>사이트명:기업형 사이트</p>
-									<p>제작기간:2일</p>
-									<p>HTML5, CSS3 사용</p>
-									<p class="btn2">
-										<a href="portfolio/corp/">VIEW SITE(MAIN)</a>
-										<a href="portfolio/corp/sub.html">VIEW SITE(SUB)</a>
-									</p>
-								</figcaption>
-							</figure>
-						</div>
-					</li>
-					<li>
-						<div class="hoverbox"> 
-							<figure class="imgwrap">
-								<img src="images/jardin.png" alt="jardin">
-								<figcaption class="hovertext">
-									<p>사이트명:JARDIN(SITE COPY)</p>
-									<p>제작기간:3일</p>
-									<p>HTML5, CSS3, JQUERY 사용</p>
-									<p class="btn2">
-										<a href="portfolio/jardin/">VIEW SITE(MAIN)</a>
-										<a href="portfolio/jardin/sub.html">VIEW SITE(SUB)</a>
-									</p>
-								</figcaption>
-							</figure>
-						</div>
-					</li>
-					<li>
-						<div class="hoverbox">
-							<figure class="imgwrap">
-								<img src="images/h-code.png" alt="h-code">
-								<figcaption class="hovertext">
-									<p>사이트명:H-CODE(SITE COPY)</p>
-									<p>제작기간:2일</p>
-									<p>TEAM PROJECT</p>
-									<p>HTML5, CSS3, JQUERY 사용</p>
-									<a href="portfolio/team/h-code/">VIEW SITE</a>
-								</figcaption>
-							</figure>
-						</div>
-					</li>
-					<li>
-						<div class="hoverbox">
-							<figure class="imgwrap">
-								<img src="images/mobileKcc.png" alt="모바일 kcc">
-								<figcaption class="hovertext">
-									<p>사이트명:KCC(MOBILE)</p>
-									<p>제작기간:8시간</p>
-									<p>HTML5, CSS3 사용</p>
-									<a href="portfolio/mobileKcc/">VIEW SITE</a>
-								</figcaption>
-							</figure>
-						</div>
-					</li>
-					<li>
-						<div class="hoverbox">
-							<figure class="imgwrap">
-								<img src="images/faq.png" alt="현대백화점 채용 faq">
-								<figcaption class="hovertext">
-									<p>사이트명:현대백화점채용 FAQ(SITE COPY)</p>
-									<p>제작기간:8시간</p>
-									<p>HTML5, CSS3, JQUERY 사용</p>
-									<a href="portfolio/study/faq/">VIEW SITE</a>
-								</figcaption>
-							</figure>
-						</div>
-					</li>
-				</ul>
-
-			</section>
-			<!-- //.container2 -->
-		</main>
-		<footer class="footer">
-			<ul class="contact">
-				<li class="c1"><img src="images/mail.png" alt=""><span>agag0514@naver.com</span></li>
-				<li class="c2"><img src="images/phone.png" alt=""><span>010-8872-6056</span></li>
-			</ul>
-		</footer>
-		<!-- //.footerwrap -->
-	</div>
-	<!-- //.wrap -->
-	<script type="text/javascript" src="js/common/jhs.js"></script>
-	<!--Start of Tawk.to Script-->
-	<script type="text/javascript">
-		var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-		(function(){
-		var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-		s1.async=true;
-		s1.src='https://embed.tawk.to/5bd7abc7476c2f239ff68335/default';
-		s1.charset='UTF-8';
-		s1.setAttribute('crossorigin','*');
-		s0.parentNode.insertBefore(s1,s0);
-		})();
-	</script>
-	<!--End of Tawk.to Script-->
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>바닐라JS 챌린지</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/e9486fd309.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- LOGIN FORM -->
+    <form class="loginForm box hidden">
+      <h1>LOGIN</h1>
+      <div>
+        <label for="userName" class="hidden">사용자 이름</label>
+        <input type="text" name="userName" />
+        <label for="login" class="hidden">로그인 버튼</label>
+        <input type="submit" value="Log in" name="login" class="btn" />
+      </div>
+    </form>
+    <!-- // LOGIN FORM -->
+    <!-- MAIN CONTENTS -->
+    <main class="hidden">
+      <h1 id="welcome"></h1>
+      <div id="clock" class="box"></div>
+      <div id="weather" class="box"></div>
+      <div class="todoListWarp box">
+        <p>TO DO LIST</p>
+        <form id="addList">
+          <label for="todoListText" class="hidden"></label>
+          <input type="text" name="todoListText" />
+          <button type="submit" class="addListBtn">
+            <i class="fas fa-check"></i>
+          </button>
+        </form>
+        <ul id="todoList">
+          <li></li>
+        </ul>
+      </div>
+    </main>
+    <!-- // MAIN CONTENTS -->
+    <script src="js/app.js"></script>
+  </body>
 </html>
