@@ -1,0 +1,11 @@
+{
+  "applinks": {
+      "apps": [],
+      "details": [
+      {
+        "appID": "748GMCTWW7.com.uniev.unicharger",
+        "paths": ["*"]
+      }
+    ]
+  }
+}
