@@ -1,0 +1,1 @@
+import{j as e,r}from"./index-1a6bfb36.js";const t=()=>e.jsx(r.Fragment,{children:e.jsx("div",{style:{paddingTop:"12rem"},children:e.jsx("iframe",{src:"https://frayfight.com/game/",style:{minWidth:"100%",minHeight:"100%",height:"600px"}})})});t.DisplayName=t;export{t as default};
